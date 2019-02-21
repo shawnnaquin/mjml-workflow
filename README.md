@@ -27,24 +27,21 @@ mjml-workflow is a modern tooling approach to building several email marketing t
   - Feel Free to fork and customize away.
   - I kept this light, but you could build a landing page and a continuous deployment system on top.
   - extend the mjml engine to minify if you want.
-  - You could simply prettify existing mjml based on the .jsbeautifyrc config.
+  - You could simply only use prettify on existing mjml based on the .jsbeautifyrc config and nothing else!
 
 ### Tech
 
 mjml-workflow uses a number of open source projects to work properly:
 
-* [node.js] - evented I/O for the backend
-* [Gulp] - the streaming build system
-* [mjml](https://mjml.io/) - the streaming build system
-* [nodemailer](https://nodemailer.com/) - the streaming build system
-* [bestzip](https://www.npmjs.com/package/bestzip) - the streaming build system
-* [browser-sync](https://www.browsersync.io/) - the streaming build system
-
-And of course Dillinger itself is open source with a [public repository][dill]
- on GitHub.
+* [node.js](https://nodejs.org) - Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.
+* [Gulp](https://gulpjs.com) - the streaming build system
+* [mjml](https://mjml.io/) -  the only framework that makes responsive-email easy 
+* [nodemailer](https://nodemailer.com/) - Send e-mails with Node.JS – easy as cake! 
+* [bestzip](https://www.npmjs.com/package/bestzip) - Provides a `bestzip` command that uses the system `zip`
+* [browser-sync](https://www.browsersync.io/) - eep multiple browsers & devices in sync
 
 ### Why not just use the mjml app?
-- because I'm stubborn, and actually enjoy front-end tooling.
+- because I'm stubborn, and actually enjoy front-end tooling, I knew it could be done!
 
 links:
 - [mjml repo](https://github.com/mjmlio/mjml)
