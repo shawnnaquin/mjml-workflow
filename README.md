@@ -72,7 +72,7 @@ In order to send test emails:
 
 You'll need to create a `.pwd` file in the project root with a single string containing your email app password for nodemailer. All other nodemailer settings are handled in `package.json.app`
 
-... See the mail.js file for .pwd usage.
+... See the `./mail.js` file for `.pwd` usage.
 
 #### nodemailer
 
@@ -80,7 +80,7 @@ In order to send test emails:
 
 You'll need to customize the `transporter` variable in `./mail.js`
 
-I currently have it set to `gmail`. see the [nodemailer docs](https://nodemailer.com/smtp/well-known/) for details on how to setup 'well-known' email services. In the case of gmail you need to setup an app password for the device you'll be sending from.
+I currently have the transporter set to `gmail`. see the [nodemailer docs](https://nodemailer.com/smtp/well-known/) for details on how to setup 'well-known' email services. In the case of gmail you need to setup an app password for the device you'll be sending from.
 
 #### package.json variables
 
