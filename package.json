@@ -1,6 +1,6 @@
 {
     "name": "mjml-email",
-    "version": "1.0.1",
+    "version": "1.0.0",
     "description": "",
     "main": "gulpfile.js",
     "scripts": {
@@ -8,7 +8,7 @@
         "pretty": "gulp htmlbeautify",
         "build": "gulp mjml",
         "version": "npm run build",
-        "semver": "npm version patch",
+        "semver": "npm --no-git-tag-version version patch",
         "mail": "npm run build && node mail.js",
         "package": "npm run build && node zip.pack.js"
     },
