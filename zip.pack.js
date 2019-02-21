@@ -27,7 +27,7 @@ fs.removeSync( `${ dist }packed` );
 
 fs.ensureDir( path.join( __dirname, `${ dist }packed` ) ).then( () => {
 
-	glob( path.join( __dirname, `${ dist }/*.html` ), { }, ( err, files ) => {
+	glob( path.join( __dirname, `${ dist }*.html` ), { }, ( err, files ) => {
 
 		for( let file of files ) {
 
