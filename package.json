@@ -1,0 +1,43 @@
+{
+    "name": "mjml-email",
+    "version": "1.0.0",
+    "description": "",
+    "main": "gulpfile.js",
+    "scripts": {
+        "serve": "gulp",
+        "pretty": "gulp htmlbeautify",
+        "build": "gulp mjml",
+        "version": "npm run build",
+        "semver": "npm version patch",
+        "mail": "npm run build && node mail.js",
+        "package": "npm run build && node zip.pack.js"
+    },
+    "app": {
+        "index": "Fall Savings.html",
+        "client": "Email Company",
+        "collection": "Clothing Sales",
+        "admin": "",
+        "to": "",
+        "from": "",
+        "subject": "`TEST v${ version } | ${ client } - ${ collection } - ${ index.split( '.' )[ 0 ] }`",
+        "zipName": "`${ client }.${ collection }.${ version }`",
+        "htmlPrefix": "`${ client }.${ collection }.`",
+        "htmlSuffix": "`.${ version }`",
+        "errors": "./errors/",
+        "src": "./src/",
+        "dist": "./dist/",
+        "utf": "utf8"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "bestzip": "^2.1.2",
+        "browser-sync": "^2.26.3",
+        "gulp": "^4.0.0",
+        "gulp-beautify": "^2.0.1",
+        "gulp-cli": "^2.0.1",
+        "gulp-html-beautify": "^1.0.1",
+        "mjml": "^4.4.0-beta.1",
+        "nodemailer": "^5.1.1"
+    }
+}
