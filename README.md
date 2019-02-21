@@ -41,7 +41,13 @@ mjml-workflow uses a number of open source projects to work properly:
 * [browser-sync](https://www.browsersync.io/) - eep multiple browsers & devices in sync
 
 ### Why not just use the mjml app?
-- because I'm stubborn, and actually enjoy front-end tooling, I knew it could be done!
+- I'm stubborn
+- I actually enjoy front-end tooling
+- I like my own editor
+- I like my own browser / browser tools
+- I like terminal and cli
+- I knew it could be done!
+- create versioned assets ready to hand off ( zip file, html files ) right from the cli!
 
 links:
 - [mjml repo](https://github.com/mjmlio/mjml)
