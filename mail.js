@@ -7,7 +7,7 @@ const nodemailer = require( 'nodemailer' );
 
 const pkg = require( path.resolve( __dirname, './package.json' ) );
 const { version } = pkg;
-const { dist, index, admin, to, from, client, collection, utf } = pkg.app;
+const { dist, index, admin, to, from, utf } = pkg.app;
 
 const pwd = fs.readFileSync( path.resolve( __dirname, './.pwd' ), utf );
 const html = fs.readFileSync( path.resolve( __dirname, `${ dist }${ index.replace( / /g, '_' ) }` ), utf );
