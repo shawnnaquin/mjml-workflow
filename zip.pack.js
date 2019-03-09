@@ -1,27 +1,27 @@
 "use strict";
 
-const path        	= require( 'path' );
-const fs 			= require( 'fs-extra' );
-const glob 			= require( 'glob' );
-const zip 			= require( 'bestzip' );
+const path = require( 'path' );
+const fs = require( 'fs-extra' );
+const glob = require( 'glob' );
+const zip = require( 'bestzip' );
 
-const pkg 			= require( path.resolve( __dirname, './package.json' ) );
-const { version }	= pkg;
-const dist 			= pkg.app.dist;
+const pkg = require( path.resolve( __dirname, './package.json' ) );
+const { version } = pkg;
+const dist = pkg.app.dist;
 
 let { client, collection, htmlSuffix, htmlPrefix, zipName } = pkg.app;
 
-const format 		= ( name ) => name.replace( / /g, '_' );
-const getName 		= ( name ) => name.split( '/' )[ name.split( '/' ).length - 1 ].split( '.' )[ 0 ];
+const format = ( name ) => name.replace( / /g, '_' );
+const getName = ( name ) => name.split( '/' )[ name.split( '/' ).length - 1 ].split( '.' )[ 0 ];
 
-client 				= format( client );
-collection 			= format( collection );
+client = format( client );
+collection = format( collection );
 
-zipName 			= eval( zipName );
-htmlSuffix 			= eval( htmlSuffix );
-htmlPrefix 			= eval( htmlPrefix );
+zipName = eval( zipName );
+htmlSuffix = eval( htmlSuffix );
+htmlPrefix = eval( htmlPrefix );
 
-const getHTMLName 	= ( name )=> `${ htmlPrefix }${ name }${ htmlSuffix }.html`;
+const getHTMLName = ( name )=> `${ htmlPrefix }${ name }${ htmlSuffix }.html`;
 
 fs.removeSync( `${ dist }packed` );
 
