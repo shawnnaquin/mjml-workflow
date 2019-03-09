@@ -1,21 +1,22 @@
 "use strict";
 
-const path 			= require( 'path' );
-const fs 			= require( 'fs-extra' );
+const path = require( 'path' );
+const fs = require( 'fs-extra' );
 
-const glob 			= require( 'glob' );
-const gulp       	= require( 'gulp' );
-const bS 			= require( 'browser-sync' ).create();
-const mjml   		= require( 'mjml' );
-const htmlbeautify 	= require( 'gulp-html-beautify' );
+const glob = require( 'glob' );
+const gulp = require( 'gulp' );
+const bS = require( 'browser-sync' ).create();
+const mjml = require( 'mjml' );
+const htmlbeautify = require( 'gulp-pretty-html' );
+const beautifyOpts = JSON.parse( fs.readFileSync( path.resolve( __dirname, './.jsbeautifyrc' ) ) );
 
-const pkg 			= require( path.resolve( __dirname, './package.json' ) );
+const pkg = require( path.resolve( __dirname, './package.json' ) );
 const { index, errors, pretty, src, dist, utf } = pkg.app;
 
 gulp.task( 'htmlbeautify', ( done ) => {
 
 	gulp.src( `${ src }/*.mjml` )
-	  .pipe( htmlbeautify( { useConfig: true } ) )
+	  .pipe( htmlbeautify( beautifyOpts ) )
 	  .pipe( gulp.dest( `${ src }` ) );
 
 	done();
