@@ -35,8 +35,8 @@ mjml-workflow uses a number of open source projects to work properly:
 
 * [node.js](https://nodejs.org) - Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.
 * [Gulp](https://gulpjs.com) - the streaming build system
-* [mjml](https://mjml.io/) -  the only framework that makes responsive-email easy 
-* [nodemailer](https://nodemailer.com/) - Send e-mails with Node.JS – easy as cake! 
+* [mjml](https://mjml.io/) -  the only framework that makes responsive-email easy
+* [nodemailer](https://nodemailer.com/) - Send e-mails with Node.JS – easy as cake!
 * [bestzip](https://www.npmjs.com/package/bestzip) - Provides a `bestzip` command that uses the system `zip`
 * [browser-sync](https://www.browsersync.io/) - eep multiple browsers & devices in sync
 
@@ -82,7 +82,7 @@ You'll need to create a `.pwd` file in the project root with a single string con
 
 #### nodemailer
 
-In order to send test emails: 
+In order to send test emails:
 
 You'll need to customize the `transporter` variable in `./mail.js`
 
@@ -90,19 +90,19 @@ I currently have the transporter set to `gmail`. see the [nodemailer docs](https
 
 #### package.json variables
 
-Almost all the variables in package.json app are used to send an email. 
+Almost all the variables in package.json app are used to send an email.
 
-Change them! 
+Change them!
 ***(espeacially the admin email and .pwd password!)***
 
 ### mjml
-[gulp-mjml](https://github.com/mjmlio/gulp-mjml) had several deprecation warnings, hadn't been updated for gulp4, and contained security risks. 
+[gulp-mjml](https://github.com/mjmlio/gulp-mjml) had several deprecation warnings, hadn't been updated for gulp4, and contained security risks.
 
 So I chose to use the main [mjml repo](https://github.com/mjmlio/mjml)
 
 Errors are saved to json files in the `./errors` folder by default.
 
-If you want to customize the mjml options you'll have to find the 
+If you want to customize the mjml options you'll have to find the
 - `markup` variable in the. `./gulpfile.js :55` and add options
 
 ### package.json.app
@@ -150,19 +150,23 @@ htmlSuffix: "`.${ version }`",
 **example:** Email_Company.Clothing_Sales.Fall_Savings.1.0.8.html
 ___
 ```
-errors": "./errors/" 
+"errors": "./errors/"
 // error dir
 ```
 ```
-src": "./src/" 
+"src": "./src/"
 // src dir
 ```
 ```
-dist": "./dist/" 
+"dist": "./dist/"
 // dist dir
 ```
 ```
-utf": "utf8" 
+"packed": "./dist/packed/"
+// deliverable directory
+```
+```
+"utf": "utf8"
 // encoding
 ```
 
@@ -207,7 +211,7 @@ Up the version in package.json by with patch ( +0.0.1 )
 npm run mail
 ```
 Sends a test email via nodemailer
-- `package.json.app.admin`, `package.json.app.to`, `package.json.app.from` and the `.pwd` keys should be changed before running. 
+- `package.json.app.admin`, `package.json.app.to`, `package.json.app.from` and the `.pwd` keys should be changed before running.
 - runs the build command
 
 ~~See the above section to change vars !!

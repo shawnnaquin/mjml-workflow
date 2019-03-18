@@ -26,6 +26,7 @@
         "errors": "./errors/",
         "src": "./src/",
         "dist": "./dist/",
+        "packed": "./dist/packed/",
         "utf": "utf8"
     },
     "author": "",
