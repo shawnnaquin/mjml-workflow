@@ -32,7 +32,7 @@
     "author": "",
     "license": "ISC",
     "devDependencies": {
-        "bestzip": "^2.1.2",
+        "bestzip": "^2.1.7",
         "browser-sync": ">=2.3.1",
         "gulp": "^4.0.0",
         "gulp-beautify": "^2.0.1",
