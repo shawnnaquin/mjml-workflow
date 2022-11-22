@@ -33,7 +33,7 @@
     "license": "ISC",
     "devDependencies": {
         "bestzip": "^2.1.2",
-        "browser-sync": ">=2.3.1",
+        "browser-sync": ">=2.27.10",
         "gulp": "^4.0.0",
         "gulp-beautify": "^2.0.1",
         "gulp-cli": "^2.0.1",
